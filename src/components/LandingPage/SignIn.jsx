@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Grid, Paper, Button } from '@material-ui/core';
+import { TextField, Grid, Paper, Button, Snackbar } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 export default function SignIn(props) {
 	const initialState = {
@@ -8,6 +8,11 @@ export default function SignIn(props) {
 	};
 
 	const [ Input, setInput ] = useState(initialState);
+	const [ SnackbarOpen, setSnackbarOpen ] = useState(true);
+	function handleCloseSnackBar() {
+		setSnackbarOpen(false);
+		localStorage.removeItem('newlyCreate');
+	}
 
 	function formSubmission() {
 		alert('Sign in');
@@ -16,6 +21,18 @@ export default function SignIn(props) {
 	console.log(props);
 	return (
 		<React.Fragment>
+			{localStorage.getItem('newlyCreate') ? (
+				<Snackbar
+					open={SnackbarOpen}
+					message="Account successfully created"
+					anchorOrigin={{
+						vertical: 'top',
+						horizontal: 'right'
+					}}
+					autoHideDuration={2000}
+					onClose={handleCloseSnackBar}
+				/>
+			) : null}
 			<Paper className="paper">
 				<form
 					onSubmit={(e) => {

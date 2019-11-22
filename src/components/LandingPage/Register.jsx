@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Grid, Paper, Button } from '@material-ui/core';
+import { TextField, Grid, Paper, Button, Snackbar } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { postData } from '../../utils/api';
 export default function SignIn(props) {
@@ -12,6 +12,7 @@ export default function SignIn(props) {
 
 	const [ Input, setInput ] = useState(initialState);
 	const [ Loading, setLoading ] = useState(false);
+
 	function addUser() {
 		setLoading(true);
 
@@ -19,7 +20,8 @@ export default function SignIn(props) {
 			.then((result) => {
 				console.log(result);
 				setLoading(false);
-				console.log(props);
+				localStorage.setItem('newlyCreate', true);
+				props.history.push('/');
 			})
 			.catch((error) => {
 				console.log(error);
@@ -29,6 +31,18 @@ export default function SignIn(props) {
 	console.log('Reg', props);
 	return (
 		<React.Fragment>
+			<Snackbar
+				open={Loading}
+				message="Creating account .."
+				anchorOrigin={{
+					vertical: 'top',
+					horizontal: 'right'
+				}}
+				autoHideDuration={2000}
+				onClose={() => {
+					setLoading(false);
+				}}
+			/>
 			<Paper className="paper">
 				<form
 					onSubmit={(e) => {
