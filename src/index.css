@@ -35,7 +35,12 @@ code {
 	color: #888 !important;
 	font-weight: 550;
 }
-
+.MuiFormLabel-root.Mui-error {
+	color: #f44336 !important;
+}
+.MuiInput-underline.Mui-error:after {
+	border-bottom-color: #f44336 !important;
+}
 .link {
 	text-decoration: none;
 }

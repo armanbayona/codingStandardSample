@@ -12,7 +12,7 @@ export default function SignIn(props) {
 
 	const [ Input, setInput ] = useState(initialState);
 	const [ Loading, setLoading ] = useState(false);
-
+	const [ InvalidPassword, setInvalidPassword ] = useState(true);
 	function addUser() {
 		setLoading(true);
 
@@ -28,7 +28,14 @@ export default function SignIn(props) {
 				setLoading(false);
 			});
 	}
-	console.log('Reg', props);
+	function confirmUserPassword(e) {
+		if (e.target.value === Input.password) {
+			setInvalidPassword(false);
+		}
+		else {
+			setInvalidPassword(true);
+		}
+	}
 	return (
 		<React.Fragment>
 			<Snackbar
@@ -99,13 +106,15 @@ export default function SignIn(props) {
 								type="password"
 								required
 								onChange={(e) => {
-									setInput({ ...Input, confirmPassword: e.target.value });
+									confirmUserPassword(e);
 								}}
 							/>
 						</Grid>
 
 						<Grid item xs={6} className="grid-padding">
-							<Button type="submit">Register</Button>
+							<Button type="submit" disabled={InvalidPassword}>
+								Register
+							</Button>
 							<Link to="/" className="link">
 								<Button type="button">Sign in</Button>
 							</Link>

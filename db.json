@@ -57,6 +57,48 @@
       "password": "$2a$10$CyZijzaKDugj3Gjt1p0Jre.RGt7hBtWbZ22J4YLkPUq4eeokkQhSm",
       "username": "asdfasdfsdfsdfsadfsadfjkl",
       "id": 10
+    },
+    {
+      "email": "asdfsadf@asdf.com",
+      "password": "$2a$10$0CIJ.Q09Ou8Mk6e9bq5Wp.bnPTJTNBnxF.4scy5NEFbJ984IeHSHe",
+      "username": "xxx",
+      "id": 11
+    },
+    {
+      "email": "judeagagad@x.com",
+      "password": "$2a$10$cZ.o.L9TsdBBjRTkgzSFs.eefeEPvnNpLihdDqtP16k8a5DBMJYHe",
+      "username": "Jude",
+      "id": 12
+    },
+    {
+      "email": "sad@gmail.com",
+      "password": "$2a$10$TBNfGIFwWtkAt6Yh0kjWS.knN1123NTLOmjN1aMZ/kixADX7fY/bm",
+      "username": "sadfasd",
+      "id": 13
+    },
+    {
+      "email": "xx@gmail.com",
+      "password": "$2a$10$feaSXQDS40f5PmWU53H.IeFbbmfsKPE2iaoMbl2IWR4RjApMIdUGW",
+      "username": "xx",
+      "id": 14
+    },
+    {
+      "email": "222@gmail.com",
+      "password": "$2a$10$nUol2iwsTtr46CbvwbKep.wBvlINp7gxqsqIjCin8.SYEhYboOeJW",
+      "username": "asdasd",
+      "id": 15
+    },
+    {
+      "email": "judeagagad@gmail.com",
+      "password": "$2a$10$PayiOeO9UVUmujqRum9Kveqc7rcGXvhqr/N208hbt54pQaAw8S8Ta",
+      "username": "judesama",
+      "id": 16
+    },
+    {
+      "email": "22@gmail.com",
+      "password": "$2a$10$TAbYO8WXDCrVnMWPVhlgxOuQ5Dsh6tLvXP3A0jnOBYT4XL8nixTVO",
+      "username": "22@gmail.com",
+      "id": 17
     }
   ],
   "posts": [

@@ -1,24 +1,34 @@
 import React, { useState } from 'react';
 import { TextField, Grid, Paper, Button, Snackbar } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { postData } from '../../utils/api';
 export default function SignIn(props) {
 	const initialState = {
-		username: '',
+		email: '',
 		password: ''
 	};
 
 	const [ Input, setInput ] = useState(initialState);
 	const [ SnackbarOpen, setSnackbarOpen ] = useState(true);
+	const [ InputError, setInputError ] = useState();
 	function handleCloseSnackBar() {
 		setSnackbarOpen(false);
 		localStorage.removeItem('newlyCreate');
 	}
 
 	function formSubmission() {
-		alert('Sign in');
+		postData('/login', { email: Input.email, password: Input.password })
+			.then((result) => {
+				localStorage.setItem('accessToken', result.data.accessToken);
+				props.history.push('/home');
+			})
+			.catch((error) => {
+				console.log(error.response);
+				setInputError(true);
+			});
 	}
-
-	console.log(props);
+	function handleTextFieldChanges(e) {}
+	console.log(Input);
 	return (
 		<React.Fragment>
 			{localStorage.getItem('newlyCreate') ? (
@@ -51,12 +61,22 @@ export default function SignIn(props) {
 						</Grid>
 						<Grid item xs={12} className="grid-padding">
 							<TextField
-								label="Username"
+								label="Email"
+								type="email"
 								fullWidth
-								value={Input.username}
+								value={Input.email}
 								onChange={(e) => {
-									setInput({ ...Input, username: e.target.value });
+									if (e.target.value.length > 0) {
+										setInput({ ...Input, email: e.target.value });
+									}
+									else {
+										setInput({ ...Input, email: e.target.value });
+										setInputError(false);
+									}
 								}}
+								required
+								error={InputError}
+								helperText={InputError ? 'Invalid email!' : ''}
 							/>
 						</Grid>
 						<Grid item xs={12} className="grid-padding">
@@ -66,8 +86,17 @@ export default function SignIn(props) {
 								fullWidth
 								value={Input.password}
 								onChange={(e) => {
-									setInput({ ...Input, password: e.target.value });
+									if (e.target.value.length > 0) {
+										setInput({ ...Input, password: e.target.value });
+									}
+									else {
+										setInput({ ...Input, password: e.target.value });
+										setInputError(false);
+									}
 								}}
+								required
+								error={InputError}
+								helperText={InputError ? 'Invalid password!' : ''}
 							/>
 						</Grid>
 						<Grid item xs={6} className="grid-padding">
