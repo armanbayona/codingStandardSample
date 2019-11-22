@@ -1,106 +1,62 @@
 {
   "users": [
     {
-      "username": "ddd",
-      "password": "admin",
-      "email": "jude.agagad@boomsourcing.com",
+      "email": "olivier@mail.com",
+      "password": "$2a$10$5QxUCqMhfh7KCG.aeJuscuw9jwnEFkuBwIpdvMHYG6rRBYET8MbYG",
       "id": 1
     },
     {
-      "username": "ddd",
-      "password": "admin",
-      "email": "jude.agagad@boomsourcing.com",
+      "email": "12312@gmail.com",
+      "password": "$2a$10$SEmECteZR.s8wlrqC.u3/uzufWtwTUWySypfo1ljo8s1Ny7k5ZlAS",
+      "username": "adasd",
       "id": 2
     },
     {
-      "username": "333",
-      "password": "admin",
-      "email": "jude.agagad@boomsourcing.com",
+      "email": "12312@asdf.com",
+      "password": "$2a$10$kLkSVyHTE5irbDoO1nsItuw0/iInoCCGMaQ1qyx5YU757iJwrzriS",
+      "username": "adasd",
       "id": 3
     },
     {
-      "name": "asdasd",
+      "email": "asdsadsad@asdf.com",
+      "password": "$2a$10$FgozplVhlPMoxRnzqXHe4uwq7261Nm/f.SE5fnmSvxwVATOti8GWS",
+      "username": "3123",
       "id": 4
     },
     {
-      "name": "asdasd",
+      "email": "123123@asdf.com",
+      "password": "$2a$10$6zxjC8vrqQaxxNBApDCqFue8pnG7VOfvJuR8hjTiO9p6x099tXqkC",
+      "username": "3123",
       "id": 5
     },
     {
-      "name": "asdasd",
+      "email": "3123123@asdf.com",
+      "password": "$2a$10$.NACDB9kiXOQOHcdBZNImeC7tZCqQCFsI1mI0RuEy6UgVEPch1n66",
       "id": 6
     },
     {
-      "name": "asdasd",
+      "email": "asdf@gmail.com",
+      "password": "$2a$10$uZz8NXdNF0nRT.sxW.EZ7OLhl1TK8xZaYz2PsJXyvtkdIFRdfod6S",
+      "username": "21123asf",
       "id": 7
     },
     {
-      "name": "asdasd",
+      "email": "q213@gmail.com",
+      "password": "$2a$10$O7TApHtI8qy.Sf3HeBWWAuFpJiCuFRUqrIO13aibnbzXI6Cc0qsGK",
+      "username": "asdfsadf",
       "id": 8
     },
     {
-      "name": "asdasd",
+      "email": "asdfasdf@gmail.com",
+      "password": "$2a$10$xWgZ7Zdiog/VcF2czwvHQej/CEEuPwMJVoVgXdDvCdw6B8YVDvnjC",
+      "username": "asfasdf",
       "id": 9
     },
     {
-      "name": "asdasd",
+      "email": "asdfasdfklsadjfsakdl@gmail.com",
+      "password": "$2a$10$CyZijzaKDugj3Gjt1p0Jre.RGt7hBtWbZ22J4YLkPUq4eeokkQhSm",
+      "username": "asdfasdfsdfsdfsadfsadfjkl",
       "id": 10
-    },
-    {
-      "name": "asdasd",
-      "id": 11
-    },
-    {
-      "name": "asdasd",
-      "id": 12
-    },
-    {
-      "name": "asdasd",
-      "id": 13
-    },
-    {
-      "name": "asdasd",
-      "id": 14
-    },
-    {
-      "name": "asdasd",
-      "id": 15
-    },
-    {
-      "name": "asdasd",
-      "id": 16
-    },
-    {
-      "name": "asdasd",
-      "id": 17
-    },
-    {
-      "name": "asdasd",
-      "id": 18
-    },
-    {
-      "name": "asdasd",
-      "id": 19
-    },
-    {
-      "name": "asdasd",
-      "id": 20
-    },
-    {
-      "name": "asdasd",
-      "id": 21
-    },
-    {
-      "name": "asdasd",
-      "id": 22
-    },
-    {
-      "name": "asdasd",
-      "id": 23
-    },
-    {
-      "name": "asdasd",
-      "id": 24
     }
   ],
   "posts": [

@@ -29,6 +29,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 
 
-### `json-server -p 4000 --watch db.json`
+### `json-server -p 4000 db.json -m ./node_modules/json-server-auth`
 
 To run server

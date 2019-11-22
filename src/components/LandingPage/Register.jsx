@@ -16,7 +16,7 @@ export default function SignIn(props) {
 	function addUser() {
 		setLoading(true);
 
-		postData('/users', { name: 'asdasd' })
+		postData('/register', { username: Input.username, email: Input.email, password: Input.password })
 			.then((result) => {
 				console.log(result);
 				setLoading(false);
@@ -24,7 +24,7 @@ export default function SignIn(props) {
 				props.history.push('/');
 			})
 			.catch((error) => {
-				console.log(error);
+				console.log(error.response);
 				setLoading(false);
 			});
 	}
@@ -78,6 +78,7 @@ export default function SignIn(props) {
 								onChange={(e) => {
 									setInput({ ...Input, email: e.target.value });
 								}}
+								type="email"
 							/>
 						</Grid>
 						<Grid item xs={12} className="grid-padding">
