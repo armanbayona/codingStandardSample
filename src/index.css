@@ -48,3 +48,33 @@ code {
 	padding: 15px;
 	padding-bottom: 25px;
 }
+a {
+	text-decoration: none;
+	color: #333;
+}
+.appbar-logo-holder {
+	padding-right: 15px;
+}
+.appbar-email-container {
+	position: absolute;
+	right: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+.appbar-email {
+	font-size: 18px;
+	font-weight: normal;
+	color: #444;
+}
+.content-wrapper {
+	height: 820px;
+	padding: 15px;
+	color: #777;
+}
+.content-title-container {
+	padding-bottom: 8px;
+}
+.content-title {
+	font-size: 20px;
+	color: #444;
+}

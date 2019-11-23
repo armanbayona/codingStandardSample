@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 import { SignIn, Register } from './components/LandingPage';
 import { LandingRoute, MainRoute } from './components/Auth';
-import { HomePage } from './components/HomePage';
+import Dashboard from './components/Dashboard/Dashboard';
 export default function Routes() {
 	return (
 		<BrowserRouter>
@@ -24,9 +24,9 @@ export default function Routes() {
 				/>
 				<MainRoute
 					exact
-					path="/home"
+					path="/dashboard"
 					component={(props) => {
-						return <HomePage {...props} />;
+						return <Dashboard {...props} />;
 					}}
 				/>
 			</Switch>
