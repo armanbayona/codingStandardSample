@@ -48,7 +48,7 @@ export default function SignIn(props) {
 				autoHideDuration={2000}
 				onClose={handleCloseSnackBar}
 			/>
-			<div className="animated fadeInLeft">
+			<div className="animated slideInLeft">
 				<Paper className="paper" className={InputError ? 'animated wobble' : null}>
 					<form
 						onSubmit={(e) => {

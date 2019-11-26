@@ -12,16 +12,10 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+
 import toolbarLogo from '../assets/img/logo.png';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import { Link } from 'react-router-dom';
-import DashboardIcon from '@material-ui/icons/Dashboard';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import { MainNavigation } from '../components/Navigatons';
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -170,28 +164,10 @@ export default function MainPage(props) {
 				</div>
 				<Divider />
 				<div className="animated bounceInDown">
-					<List>
-						<ListItem button>
-							<ListItemIcon>
-								<DashboardIcon />
-							</ListItemIcon>
-							<ListItemText primary="Dashboard" />
-						</ListItem>
-					</List>
-					<Divider />
-					<List>
-						<Link>
-							<ListItem to="/" onClick={removeToken}>
-								<ListItemIcon>
-									<ExitToAppIcon />
-								</ListItemIcon>
-								<ListItemText primary="Logout" />
-							</ListItem>
-						</Link>
-					</List>
+					<MainNavigation />
 				</div>
 			</Drawer>
-			<main className={`${classes.content} animated bounceInUp`}>
+			<main className={classes.content}>
 				<div className={classes.toolbar} />
 				{props.render}
 			</main>

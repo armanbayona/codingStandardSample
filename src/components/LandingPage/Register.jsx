@@ -59,7 +59,7 @@ export default function SignIn(props) {
 				}}
 			/>
 
-			<div className="animated fadeInRight">
+			<div className="animated slideInRight">
 				<Paper className="paper">
 					<form
 						onSubmit={(e) => {

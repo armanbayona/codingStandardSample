@@ -5,6 +5,24 @@
       "password": "$2a$10$RaTE0y9GfSP9oNdHUYmuxO/22.uFeJlei23VAukqzqtVYH3ZOukk.",
       "username": "judesama",
       "id": 1
+    },
+    {
+      "email": "judeagagad@gmail.com",
+      "password": "$2a$10$iCSe6FbPLRVEvC116tv.aO2X2c2zdtoVE7w6XeCiWhXALwhYT9VIO",
+      "username": "judeagagad@gmail.com",
+      "id": 2
+    },
+    {
+      "email": "asdfsadf@asdf.com",
+      "password": "$2a$10$cPCFuxXo5bIPktXEm0GADu1q2aojk1E1AVKyRgmz.CgETxKeSDlXK",
+      "username": "xxx",
+      "id": 3
+    },
+    {
+      "email": "as@gmail.com",
+      "password": "$2a$10$u.c3b6ZXy8Rn.ssRcnT7kuNS2ix09TJ4tlqbyTs/oHarRgGz3iOiO",
+      "username": "sadfdsa",
+      "id": 4
     }
   ],
   "posts": [
