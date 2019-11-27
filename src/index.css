@@ -106,5 +106,16 @@ a {
 	width: 95%;
 	padding: 15px;
 	font-size: 16px;
-	color: #444;
+	border: solid 1px #ccc;
+	color: #555;
+}
+@media screen and (min-device-width: 1024px) and (max-device-width: 1600px) {
+	.reply-form-container {
+		width: 1200px;
+	}
+}
+@media screen and (max-device-width: 1024px) {
+	.reply-form-container {
+		width: 750px;
+	}
 }
