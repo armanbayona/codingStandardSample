@@ -5,6 +5,7 @@ import { SignIn, Register } from './components/LandingPage';
 import { LandingRoute, MainRoute } from './components/Auth';
 import Dashboard from './components/Dashboard/Dashboard';
 import Users from './components/Users/Users';
+import Chat from './components/Chat/Chat';
 export default function Routes() {
 	return (
 		<BrowserRouter>
@@ -30,6 +31,14 @@ export default function Routes() {
 						return <Dashboard {...props} />;
 					}}
 				/>
+				<MainRoute
+					exact
+					path="/chat"
+					component={(props) => {
+						return <Chat {...props} />;
+					}}
+				/>
+
 				<MainRoute
 					exact
 					path="/users"

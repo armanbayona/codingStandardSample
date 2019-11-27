@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
 		flexShrink: 0,
 		whiteSpace: 'nowrap'
 	},
-	drawertrue: {
+	drawerOpen: {
 		width: drawerWidth,
 		transition: theme.transitions.create('width', {
 			easing: theme.transitions.easing.sharp,
@@ -75,30 +75,54 @@ const useStyles = makeStyles((theme) => ({
 	},
 	content: {
 		flexGrow: 1,
-		padding: 10,
-		height: '100vh'
+		padding: theme.spacing(3)
 	}
 }));
 
 export default function MainPage(props) {
 	const classes = useStyles();
+	const theme = useTheme();
+	const [ open, setOpen ] = React.useState(false);
 
+	const handleDrawerOpen = () => {
+		setOpen(true);
+	};
+
+	const handleDrawerClose = () => {
+		setOpen(false);
+	};
+
+	function removeToken() {
+		localStorage.removeItem('accessToken');
+		localStorage.removeItem('email');
+	}
 	return (
 		<div className={classes.root}>
 			<CssBaseline />
 			<AppBar
 				position="fixed"
 				className={`${clsx(classes.appBar, {
-					[classes.appBarShift]: true
-				})} animated bounceInDown`}
+					[classes.appBarShift]: open
+				})} animated bounceInLeft`}
 				color="default"
 				style={{ backgroundColor: '#F1F1F1' }}
 			>
 				<Toolbar>
+					<IconButton
+						style={{ color: '#333' }}
+						aria-label="open drawer"
+						onClick={handleDrawerOpen}
+						edge="start"
+						className={clsx(classes.menuButton, {
+							[classes.hide]: open
+						})}
+					>
+						<MenuIcon />
+					</IconButton>
 					<div>
 						<img
 							className={clsx(classes.menuButton, {
-								[classes.hide]: true
+								[classes.hide]: open
 							})}
 							src={toolbarLogo}
 							width={115}
@@ -118,21 +142,25 @@ export default function MainPage(props) {
 			<Drawer
 				variant="permanent"
 				className={clsx(classes.drawer, {
-					[classes.drawertrue]: true,
-					[classes.drawerClose]: !true
+					[classes.drawerOpen]: open,
+					[classes.drawerClose]: !open
 				})}
 				classes={{
 					paper: clsx({
-						[classes.drawertrue]: true,
-						[classes.drawerClose]: !true
+						[classes.drawerOpen]: open,
+						[classes.drawerClose]: !open
 					})
 				}}
-				true={true}
+				open={open}
 			>
 				<div className={classes.toolbar}>
 					<div className="appbar-logo-holder">
 						<img src={toolbarLogo} width={115} />
 					</div>
+
+					<IconButton onClick={handleDrawerClose}>
+						{theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+					</IconButton>
 				</div>
 				<Divider />
 				<div className="animated bounceInDown">

@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import GroupOutlinedIcon from '@material-ui/icons/GroupOutlined';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-
+import TelegramIcon from '@material-ui/icons/Telegram';
 export default function MainNavigation() {
 	function removeToken() {
 		localStorage.removeItem('accessToken');
@@ -19,6 +19,16 @@ export default function MainNavigation() {
 							<DashboardIcon />
 						</ListItemIcon>
 						<ListItemText primary="Dashboard" />
+					</ListItem>
+				</List>
+			</NavLink>
+			<NavLink to="/chat">
+				<List>
+					<ListItem button>
+						<ListItemIcon>
+							<TelegramIcon />
+						</ListItemIcon>
+						<ListItemText primary="Chat" />
 					</ListItem>
 				</List>
 			</NavLink>
